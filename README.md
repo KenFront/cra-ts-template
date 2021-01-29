@@ -11,6 +11,11 @@
     "key": "alt+shift+f",
     "command": "stylelint.executeAutofix",
     "when": "editorTextFocus && editorLangId == 'scss'"
+  },
+  {
+    "key": "alt+shift+f",
+    "command": "stylelint.executeAutofix",
+    "when": "editorTextFocus && editorLangId == 'css'"
   }
 ]
 ```
