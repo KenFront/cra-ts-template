@@ -19,13 +19,3 @@
   }
 ]
 ```
-
-##### in settings.json(vscode config)
-
-```json
-{
-  ...
-  "css.validate": false,
-  "scss.validate": false
-}
-```
