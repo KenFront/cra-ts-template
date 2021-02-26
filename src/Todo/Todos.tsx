@@ -4,8 +4,7 @@ import { useMachine } from '@xstate/react';
 import useHashChange from './useHashChange';
 import Todo from './Todo';
 import todosMachine, { TodosContext } from './todosMachine';
-
-import './index.css';
+import './style.scss';
 
 function filterTodos(filter: TodosContext['filter'], todos: TodosContext['todos']) {
   if (filter === 'active') {
@@ -35,12 +34,7 @@ const persistedTodosMachine = todosMachine.withConfig(
   {
     newTodo: 'Learn state machines',
     todos: (() => {
-      try {
-        return JSON.parse(localStorage.getItem('todos-xstate') ?? '') || [];
-      } catch (e) {
-        console.error(e);
-        return [];
-      }
+      return JSON.parse(localStorage.getItem('todos-xstate') ?? '[]') || [];
     })(),
     filter: 'active',
   },
@@ -68,9 +62,9 @@ function Todos() {
   const filteredTodos = filterTodos(filter, todos);
 
   return (
-    <section className="todoapp" data-state={state.toStrings()}>
+    <section className="bg-white pst-relative todoapp" data-state={state.toStrings()}>
       <header className="header">
-        <h1>todos</h1>
+        <h1 className="pst-absolute text-align-center w-100 todoapp-title">todos</h1>
         <input
           className="new-todo"
           placeholder="What needs to be done?"

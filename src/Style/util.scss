@@ -1,0 +1,21 @@
+@import './variable.scss';
+
+.bg-white {
+  background: $bg-white;
+}
+
+.pst-relative {
+  position: relative;
+}
+
+.pst-absolute {
+  position: absolute;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.w-100 {
+  width: 100%;
+}
