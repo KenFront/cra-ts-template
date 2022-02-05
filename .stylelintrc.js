@@ -9,5 +9,9 @@ module.exports = {
     ],
     'declaration-block-trailing-semicolon': null,
     'no-descending-specificity': null,
+    indentation: null,
+    'selector-pseudo-element-no-unknown': null,
+    'declaration-colon-newline-after': null,
+    'value-list-comma-newline-after': null,
   },
 };

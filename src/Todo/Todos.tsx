@@ -5,8 +5,6 @@ import useHashChange from './useHashChange';
 import Todo from './Todo';
 import todosMachine, { TodosContext } from './todosMachine';
 
-import './index.css';
-
 function filterTodos(filter: TodosContext['filter'], todos: TodosContext['todos']) {
   if (filter === 'active') {
     return todos.filter((todo) => !todo.completed);
